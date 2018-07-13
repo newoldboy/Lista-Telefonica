@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="listaTelefonica">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lista Telefonica</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/ui.css">
+	
+	
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular/angular-messages.js"></script>
+	<script src="lib/angular/angular-route.js"></script>
+	
+	<script src="js/app.js"></script>
+	<script src="js/config/RouteConfig.js"></script>
+	<script src="js/config/interceptorConfig.js"></script>
+	<script src="js/controllers/listaTelefonicaCtrl.js"></script>
+	<script src="js/filters/nameFilter.js"></script>
+	<script src="js/filters/ellipisesFilter.js"></script>
+	<script src="js/modules/uiModuloCtrl.js"></script>
+	<script src="js/Intercepters/loadingInterceptor.js"></script>
+	
+</head>
+<body>
+	<div  class="jumbotron"  ng-show="loading">
+		<h5>Carregando...</h5>
+	</div>
+	<div ng-hide="loading">
+		<div ng-view></div>			
+		<div ng-include="'footer.html'"></div>
+	</div>
+</body>
+</html>
+
